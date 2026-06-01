@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="/stylesheets/register.css">
+</head>
+<body>
+    <div id="login-page">
+    <div id="img-login"> </div>
+    <div id="create-btn">
+      <h1>Create an account</h1>
+      <p id="already">Already have an account?  <a href="/student/login">  LOG IN</a></p>
+
+      <form method="post" action="/student/register">
+      <input id="name" type="text"  onkeypress="return /[a-zA-Z ]/.test(event.key)"  placeholder=" NAME" maxlength="20" name="name">
+      <input id="username" type="text" placeholder=" USERNAME" name="username">
+      <input id="rollNumber" type="text" placeholder="ROLL NUMBER" name="rollNumber">
+      <input id="email" type="text" placeholder="EMAIL" name="email">
+      <input id="log-pass" type="password" placeholder="PASSWORD" name="password">
+      <br> 
+      <input id="create-account" type="submit" value="CREATE ACCOUNT"></input>
+      </form>
+
+      <!-- <p id="reg">.................................Or Register with.................................</p>
+      <button id="google">Google</button> -->
+      
+      
+    </div>
+    </div>
+    </div>
+    
+</body>
+</html>

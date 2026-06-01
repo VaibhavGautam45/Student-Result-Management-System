@@ -1,0 +1,120 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f2f2f2;
+        }
+
+        /* ===== Layout ===== */
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* ===== Sidebar ===== */
+        .sidebar {
+            width: 250px;
+            background: #2f2f2f;
+            color: #fff;
+        }
+
+        .sidebar h2 {
+            padding: 20px;
+            font-size: 14px;
+            text-transform: uppercase;
+            color: #bfbfbf;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            padding: 15px 20px;
+            border-bottom: 1px solid #3a3a3a;
+            cursor: pointer;
+        }
+
+        .sidebar ul li i {
+            margin-right: 10px;
+        }
+
+        .sidebar ul li:hover {
+            background: #1f1f1f;
+        }
+
+        /* ===== Main ===== */
+        .main {
+            flex: 1;
+        }
+
+        /* ===== Topbar ===== */
+        .topbar {
+            background: #fff;
+            padding: 15px 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logout {
+            color: red;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* ===== Content ===== */
+        .content {
+            padding: 30px;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+        }
+
+        /* ===== Cards ===== */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            color: #fff;
+            padding: 25px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 120px;
+        }
+
+        .card i {
+            font-size: 50px;
+            opacity: 0.4;
+        }
+
+        .card h2 {
+            font-size: 40px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        .blue { background: #3498db; }
+        .red { background: #e74c3c; }
+        .orange { background: #f39c12; }
+        .green { background: #27ae60; }
+
+        @media (max-width: 768px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Result</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white">
+
+<div class="flex min-h-screen">
+
+  <!-- 🔷 Sidebar -->
+  <aside class="w-64 bg-white/10 backdrop-blur-xl border-r border-white/20 p-6">
+    <h2 class="text-2xl font-bold mb-10">⚡ Admin</h2>
+
+    <nav class="space-y-4">
+      <a href="/admin/login/dashboard" class="block px-4 py-2 rounded-lg hover:bg-white/20">Dashboard</a>
+      <a href="/students" class="block px-4 py-2 rounded-lg hover:bg-white/20">Students</a>
+      <a href="/add-result" class="block px-4 py-2 rounded-lg bg-white/20">Add Result</a>
+      <a href="/logout" class="block px-4 py-2 rounded-lg hover:bg-red-500/50">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- 🔷 Main -->
+  <main class="flex-1 flex items-center justify-center p-8">
+
+    <div class="w-full max-w-xl bg-white/10 backdrop-blur-xl p-8 rounded-2xl border border-white/20 shadow-lg">
+
+      <h1 class="text-2xl font-semibold mb-6 text-center">📊 Add Student Result</h1>
+
+      <form action="/add-result" method="POST" class="space-y-5">
+
+        <!-- Roll Number -->
+        <div>
+          <label class="block text-gray-300 mb-1">Roll Number</label>
+          <input type="text" name="rollNumber" required
+            class="w-full p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Subject -->
+        <div>
+          <label class="block text-gray-300 mb-1">Subject</label>
+          <input type="text" name="subject" required
+            class="w-full p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-purple-500">
+        </div>
+
+        <!-- Marks -->
+        <div>
+          <label class="block text-gray-300 mb-1">Marks</label>
+          <input type="number" name="marks" required
+            class="w-full p-3 rounded-lg bg-white/10 border border-white/20 focus:outline-none focus:ring-2 focus:ring-green-500">
+        </div>
+
+        <!-- Submit -->
+        <button
+          class="w-full bg-gradient-to-r from-blue-500 to-purple-600 py-3 rounded-lg font-semibold hover:scale-105 transition">
+          ➕ Add Result
+        </button>
+
+      </form>
+
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>

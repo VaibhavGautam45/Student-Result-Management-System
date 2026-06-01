@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white">
+
+<div class="flex min-h-screen">
+
+  <!-- 🔷 Sidebar -->
+  <aside class="w-64 bg-white/10 backdrop-blur-xl border-r border-white/20 p-6">
+    <h2 class="text-2xl font-bold mb-10 tracking-wide">⚡ Admin</h2>
+
+    <nav class="space-y-4">
+      <a href="/admin/login/dashboard" class="block px-4 py-2 rounded-lg hover:bg-white/20 transition">Dashboard</a>
+      <a href="/students/details" class="block px-4 py-2 rounded-lg hover:bg-white/20 transition">Students</a>
+      <a href="/add-result" class="block px-4 py-2 rounded-lg hover:bg-white/20 transition">Add Result</a>
+      <a href="/logout" class="block px-4 py-2 rounded-lg hover:bg-red-500/50 transition">Logout</a>
+    </nav>
+  </aside>
+
+  <!-- 🔷 Main -->
+  <main class="flex-1 p-8">
+
+    <!-- 🔸 Topbar -->
+    <div class="flex justify-between items-center mb-8">
+      <h1 class="text-3xl font-semibold tracking-wide">Dashboard</h1>
+      <div class="bg-white/10 px-4 py-2 rounded-lg backdrop-blur">
+        Welcome, Admin 👑
+      </div>
+    </div>
+
+    <!-- 🔸 Stats -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+
+      <div class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 hover:scale-105 transition">
+        <p class="text-gray-300">Total Students</p>
+        <h2 class="text-3xl font-bold mt-2"><%= totalStudents || 0 %></h2>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 hover:scale-105 transition">
+        <p class="text-gray-300">Results Uploaded</p>
+        <h2 class="text-3xl font-bold mt-2"><%= totalResults || 0 %></h2>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20 hover:scale-105 transition">
+        <p class="text-gray-300">Active Users</p>
+        <h2 class="text-3xl font-bold mt-2"><%= totalStudents %></h2>
+      </div>
+
+    </div>
+
+    <!-- 🔸 Table -->
+    <div class="bg-white/10 backdrop-blur-xl p-6 rounded-2xl border border-white/20">
+      <h2 class="text-xl font-semibold mb-4">Recent Students</h2>
+
+      <table class="w-full text-left">
+        <thead>
+          <tr class="text-gray-300 border-b border-white/20">
+            <th class="p-3">Name</th>
+            <th class="p-3">Email</th>
+            <th class="p-3">rollNumber</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% if (students && students.length > 0) { %>
+            <% students.forEach(student => { %>
+              <tr class="border-b border-white/10 hover:bg-white/10 transition">
+                <td class="p-3"><%= student.name %></td>
+                <td class="p-3"><%= student.email %></td>
+                <td class="p-3"><%= student.rollNumber %></td>
+              </tr>
+            <% }) %>
+          <% } else { %>
+            <tr>
+              <td colspan="3" class="p-3 text-center text-gray-400">
+                No data available
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: linear-gradient(135deg, #1E1E1E, #0B132B); margin-left:50px ">
+    <h1 style="color: gold;">All Students Details</h1>
+
+<% students.forEach(student => { %>
+  <div style="border:1px solid #d73d3d; background-color: rgb(179, 181, 181); padding:10px; margin:10px; border-radius: 12px; width: 40%;">
+
+    <h2><%= student.name %> (Roll: <%= student.rollNumber %>)</h2>
+
+    <% if (student.results.length > 0) { %>
+      <ul>
+        <% student.results.forEach(r => { %>
+          <li>
+            <strong><%= r.subject %></strong> : <%= r.marks %>
+          </li>
+              
+        <% }) %>
+      </ul>
+    <% } else { %>
+      <p>No results available</p>
+    <% } %>
+  
+
+     <a href="/students/edit/<%= student._id %>">
+  <button>Edit </button>
+</a>
+
+  </div>
+<% }) %>
+</body>
+</html>

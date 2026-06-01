@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signIn</title>
+    <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+    <div id="big-box">
+    <div id="pic"></div>
+    <div id="welcome">
+        <h1>Welcome Back</h1>
+
+        <!-- <p>Enter an email and password</p> -->
+      <form method="post" action="/student/login">
+        <label  class="klmn"> Email address <br>
+            <input type="text"  id= "email-box2" placeholder="Enter email" name="email">
+        </label >
+        <br>
+        <label class="klmn"> Password <br>
+             <input type="password" id="password-btn2" placeholder="Enter password" name="password">
+        </label>
+        <br>
+        <!-- <a id="forgot"href="forgot-link ">Forgot Password</a> -->
+        <br>
+        <input id="sign-btn" type="submit"  value=" sign in"  >
+        </form>
+
+    </div>
+    </div>
+</body>
+</html>

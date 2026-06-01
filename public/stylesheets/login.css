@@ -1,0 +1,75 @@
+*{
+    background-color: #18203A;
+}
+#big-box{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+#pic{
+    border-radius: 25px;
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 90vh;
+    width: 50vw;
+    background-image: url(/images/anm.png);
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    font-size: 52px;
+   margin-left: 110px;
+   color: rgb(110, 119, 38);
+
+}
+#welcome{
+    margin-top: 100px;
+  height: 90vh;
+    width: 50vw;
+}
+.klmn{
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 60px;
+    color: aliceblue;
+}
+#email-box2{
+     width: 400px;
+     height: 40px;
+     border: 2px solid black;
+    margin-left: 90px;
+    box-shadow: 10px 10px 5px rgb(233, 129, 10);
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-color: aliceblue;
+}
+#sign-btn{
+    font-size: 32px;
+    width: 400px;
+    height: 40px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 2px solid black;
+    margin-left: 90px;
+    background-color:rgb(238, 238, 113) ;
+    box-shadow: 10px 10px 5px rgb(233, 129, 10);
+
+}
+#forgot{
+     margin-left: 90px;
+     color: deepskyblue;
+}
+#password-btn2{
+     margin-left: 90px;
+     width: 400px;
+     height: 40px;
+     border: 2px solid black;
+     background-color: aliceblue;
+      box-shadow: 10px 10px 5px rgb(233, 129, 10);
+     border-radius: 15px;
+      margin-bottom: 30px;
+}
+p{
+    margin-left: 90px;
+    margin-top: 0%;
+}
